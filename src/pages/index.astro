@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import ButtonLink from '../components/ButtonLink.astro'
+import Logo from '../icons/Logo.astro'
+import WhatsappIcon from '../icons/Whatsapp.astro'
+import TelegramIcon from '../icons/Telegram.astro'
+---
+<Layout
+	title='Flor art'
+	description='Bio link of flor art'>
+	<div class='grid grid-rows-4 items-center max-h-full h-full'>
+		<Header class='row-span-2' />
+
+		<section class='relative flex flex-col gap-4 row-span-3'>
+			<Logo class='absolute text-white/10 size-96 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] -z-10'/>
+			<ButtonLink href='https://wa.me/message/4BEU6RWR36OYM1'>
+				<WhatsappIcon class='size-8'/>
+				Whatsapp
+			</ButtonLink>
+			<ButtonLink href='https://t.me/Florart10'>
+				<TelegramIcon class='size-8'/>
+				Telegram
+			</ButtonLink>
+		</section>
+
+		<section class='relative overflow-hidden h-[15em] row-span-4'>
+			<img src='flor-1.png' alt='Ramo de flores de florart' class='absolute -left-8 -bottom-8 h-full aspect-auto'>
+			<img src='flor-2.png' alt='Ramo de flores de florart' class='absolute left-[50%] translate-x-[-50%] -bottom-4 h-full aspect-auto'>
+			<img src='flor-3.png' alt='Ramo de flores de florart' class='absolute -right-12 -bottom-8 h-full aspect-auto'>
+		</section>
+	</div>
+</Layout>
