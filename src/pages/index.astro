@@ -11,12 +11,12 @@ const linkToTelegram = 'https://t.me/Florart10'
 ---
 <Layout
 	title='Florart - Descubre de la eternidad en nuestras flores'
-	description='Bio link of flor art'>
-	<section class='grid grid-rows-4 items-center min-h-full overflow-auto'>
-		<Header class='row-span-2' />
+	description='Bio link de flor art'>
+	<main class='flex flex-col items-center h-full w-full mt-[5vh]'>
+		<Header class='' />
 
-		<section class='relative flex flex-col gap-4 row-span-3'>
-			<Logo class='absolute text-white/10 size-96 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] -z-10'/>
+		<section class='relative flex-1 w-full max-w-[40em] flex flex-col justify-center gap-4 px-2'>
+			<Logo class='absolute text-white/10 size-96 lg:size-[40em] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] -z-10'/>
 
 			<ButtonLink href={linkToWhatsapp}>
 				<WhatsappIcon class='size-8'/>
@@ -28,10 +28,10 @@ const linkToTelegram = 'https://t.me/Florart10'
 			</ButtonLink>
 		</section>
 
-		<section class='relative h-[15em] w-[30em] row-span-4'>
-			<img src='/flor-1.png' alt='Ramo de flores de florart' class='absolute -left-0 -bottom-8 h-full aspect-auto'>
-			<img src='/flor-2.png' alt='Ramo de flores de florart' class='absolute left-[50%] translate-x-[-50%] -bottom-4 h-full aspect-auto'>
-			<img src='/flor-3.png' alt='Ramo de flores de florart' class='absolute -right-0 -bottom-8 h-full aspect-auto'>
+		<section class='relative h-[15em] w-full min-w-[500px] max-w-[40em] overflow-hidden'>
+			<img src='/flor-1.webp' alt='Ramo de flores de florart' class='absolute -left-0 -bottom-8 h-full aspect-auto'>
+			<img src='/flor-2.webp' alt='Ramo de flores de florart' class='absolute left-[50%] translate-x-[-50%] -bottom-8 h-full aspect-auto'>
+			<img src='/flor-3.webp' alt='Ramo de flores de florart' class='absolute right-0 -bottom-8 h-full aspect-auto'>
 		</section>
-	</section>
+	</main>
 </Layout>
