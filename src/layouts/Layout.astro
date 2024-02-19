@@ -8,11 +8,12 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='description' content={description}/>
 		<meta name='viewport' content='width=device-width' />
+		<meta name='theme-color' content='#0174cf' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
@@ -20,15 +21,21 @@ const { title, description } = Astro.props;
 
 	<body
 		id='background'
-		class='h-screen w-screen max-h-screen max-w-[30em] mx-auto m-0 p-none px-4'>
+		class='h-dvh w-screen p-none'>
 		<slot />
 	</body>
 
 	<style>
+	/* BUG: the <main> tag overflows body, im still searching why it happens */
+	html, body {
+		overflow: hidden;
+	}
+
 	#background {
-		background-image: url('/sky.png');
-		background-repeat: no-repeat;
+		background-image: url('/sky.webp');
+		background-repeat: repeat;
 		background-size: cover;
+		background-color: #0174cf;
 	}
 	</style>
 </html>
