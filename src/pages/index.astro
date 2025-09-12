@@ -1,4 +1,5 @@
 ---
+import Card from '../components/Card.astro'
 import ButtonLink from '../components/ButtonLink.astro'
 import Layout from '../layouts/Layout.astro'
 import Logo from '../icons/Logo.astro'
@@ -12,7 +13,7 @@ const linkToTelegram = 'https://t.me/Florart10'
 <Layout
 	title='Florart - Descubre de la eternidad en nuestras flores'
 	description='Bio link de flor art'>
-	<main class='flex flex-col items-center justify-end h-full w-full'>
+	<main class='flex flex-col items-center gap-2 h-full w-full'>
 		<Header/>
 
 		<section class='relative flex-1 w-full max-w-[40em] flex flex-col items-center justify-center gap-4 px-2'>
@@ -28,10 +29,16 @@ const linkToTelegram = 'https://t.me/Florart10'
 			</ButtonLink>
 		</section>
 
-		<section class='relative h-[15em] w-full min-w-[500px] max-w-[40em] overflow-hidden'>
-			<img src='/flor-1.webp' alt='Ramo de flores de florart' class='absolute -left-0 -bottom-0 h-full aspect-auto'>
-			<img src='/flor-2.webp' alt='Ramo de flores de florart' class='absolute left-[50%] translate-x-[-50%] -bottom-0 h-full aspect-auto'>
-			<img src='/flor-3.webp' alt='Ramo de flores de florart' class='absolute right-0 -bottom-0 h-full aspect-auto'>
+		<span class="pt-9 text-xl text-[zain] text-center italic text-white">Desde una flor única hasta un conjunto armonioso</span>
+		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full min-w-[500px] max-w-[40em] ">
+			<Card title="Ramo de tulipanes" img="/tulipanes.webp"/>
+			<Card title="Ramos Rosas" img="/flor-3.webp"/>
+			<Card title="Ramos Buchones" img="/ramo-buchon.webp"/>
+			<Card title="Ramos Margarita" img="/margaritas.webp"/>
+			<Card title="Cajas de Regalos" img="/caja.webp"/>
+			<Card title="Lapiceros Personalizados" img="/lapiceros.webp"/>
+			<Card title="Alpitas Personalizados" img="/alpitas.webp"/>
+			<Card title="Arreglos" img="/arreglo.webp"/>
 		</section>
 	</main>
 </Layout>
